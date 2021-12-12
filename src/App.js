@@ -1,25 +1,30 @@
 import React from 'react';
-
-import Navbar from './components/Navbar/Navbar';
-import HeroSection from './components/HeroSection/HeroSection';
-import WeLikeAgency from './components/WeLikeAgencySection/WeLikeAgencySection';
-import SolutionSection from './components/SolutionSection/SolutionSection';
-import CompanyLogoSection from './components/CompanyLogoSection/CompanyLogoSection';
-import OfferSection from './components/OfferSection/OfferSection';
-import TestimonalSection from './components/TestimonialSection/TestimonialSection';
-import PortfolioSection from './components/PortfolioSection/PortfolioSection';
+import { ThemeProvider } from '@mui/material/styles';
+import Navbar from './sections/Navbar/Navbar';
+import HeroSection from './sections/HeroSection/HeroSection';
+import WeLikeAgency from './sections/WeLikeAgencySection/WeLikeAgencySection';
+import SolutionSection from './sections/SolutionSection/SolutionSection';
+import CompanyLogoSection from './sections/CompanyLogoSection/CompanyLogoSection';
+import OfferSection from './sections/OfferSection/OfferSection';
+import TestimonalSection from './sections/TestimonialSection/TestimonialSection';
+import PortfolioSection from './sections/PortfolioSection/PortfolioSection';
+import ContactSection from './sections/ContactSection/ContactSection';
+import theme from './ThemeOptions';
 
 function App() {
 	return (
 		<React.Fragment>
-			<Navbar />
-			<HeroSection />
-			<WeLikeAgency />
-			<SolutionSection />
-			<CompanyLogoSection />
-			<OfferSection />
-			<TestimonalSection />
-			<PortfolioSection />
+			<ThemeProvider theme={theme}>
+				<Navbar />
+				<HeroSection />
+				<WeLikeAgency />
+				<SolutionSection />
+				<CompanyLogoSection />
+				<OfferSection />
+				<TestimonalSection />
+				<PortfolioSection />
+				<ContactSection />
+			</ThemeProvider>
 		</React.Fragment>
 	);
 }
